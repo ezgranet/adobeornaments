@@ -34,7 +34,7 @@ ItalicFont={Palatine Parliamentary Italic}
 \tableofcontents
 \clearpage
 \section{Overview}
-Several Adobe\textsuperscript{®️} fonts provide `hidden' ornaments, fleurons, and other typographic flourishes as additional features. These can be annoying to access in \LaTeX. This package provides any easy command to use the ornaments, and a guide to the individual ornaments to enable easy use (appended to this documentation and available separately in the package as \texttt{adobeornaments-list.pdf}).  \textcolor{red}{The fonts with these ornaments are sold by Adobe\textsuperscript{®️} and not provided with this package. You must purchase them separately for the package to work.}
+Several Adobe\textsuperscript{®️} fonts provide `hidden' ornaments, fleurons, and other typographic flourishes as additional features. These can be annoying to access in \LaTeX. This package provides any easy command to use the ornaments, and a guide to the individual ornaments to enable easy use (appended to this documentation and available separately in the package as \texttt{adobeornaments-list.pdf}).  \textcolor{red}{The fonts with these ornaments are sold by Adobe\textsuperscript{®️} and not provided with this package. You must purchase them separately for the package to work, or, in the case of Minion Pro only, obtain the free copy bundled with Adobe Reader.}
 \section{Usage}
 The package provides a single command 
 {\color{darkspringgreen}\ttfamily\bfseries{%
@@ -223,6 +223,9 @@ firstnumber=last
 
 
 \section{Version History}
+\subsection{\texttt{1.0.1}}
+
+\ttfamily 15 May 2023: Fix typo in readme
 
 \subsection{\texttt{1.0.0}}
 
@@ -230,7 +233,7 @@ firstnumber=last
 \clearpage
 \pagestyle{empty}\addcontentsline{toc}{section}{Appendix: Ornaments List}
 
-\includepdf[pages=-]{adobe-ornaments-list.pdf}
+\includepdf[pages=-]{adobeornaments-list.pdf}
 
 	
 \end{document}

@@ -1,0 +1,17 @@
+adobeornaments - adobe ornaments in LaTeX
+
+version: 1.0.1
+
+This package provides an easy way to use Adobe fonts' ornaments in LaTeX. NOTE: the Adobe fonts are not included with the package and must be purchased separately.
+
+
+This work may be distributed and/or modified under the conditions of the
+LaTeX Project Public License (LPPL), version 1.3c or later. 
+
+
+For suggestions, feature requests, and bug reports, please use the project's
+GitHub site:  https://github.com/ezgranet/adobeornaments
+
+Version history: 
+15/05/2023 - revise typo in README
+14/05/2023 - package creation
