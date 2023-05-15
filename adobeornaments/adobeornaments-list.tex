@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+\usepackage{adobeornaments}
+% stuff just for ornament example page
+\usepackage{verbatim}
+\setmonofont{Source Code Pro}
+\newcounter{orntest}
+\newcommand{\orntest}{\stepcounter{orntest}
+\texttt{\Alph{orntest}}\quad\Alph{orntest}\\
+\texttt{\alph{orntest}}\quad\alph{orntest}}
+\newcommand{\testorn}[1]{%
+{\ttfamily #1}%
+\quad\addfontfeatures{Ornament=#1}•\\}%
+\newcommand{\orninfo}[3]{\addcontentsline{toc}{section}{#1}
+#2\large\centering
+#1\\\texttt{#3}\normalsize
+\begin{multicols}{2}
+\testorn{1}
+\testorn{2}
+\testorn{3}
+\testorn{4}
+\testorn{5}
+\testorn{6}
+\testorn{7}
+\testorn{8}
+\testorn{9}
+\testorn{10}
+\testorn{11}
+\testorn{12}
+\testorn{13}
+\testorn{14}
+\testorn{15}
+\testorn{16}
+\testorn{17}
+\testorn{18}
+\testorn{19}
+\testorn{20}
+\testorn{21}
+\testorn{22}
+\testorn{23}
+\testorn{24}
+\testorn{25}
+\testorn{26}
+\testorn{27}
+\testorn{28}
+\testorn{29}
+\testorn{30}
+\testorn{31}
+\testorn{32}
+\testorn{33}
+\testorn{34}
+\testorn{35}
+\testorn{36}
+\testorn{37}
+\testorn{38}
+\testorn{39}
+\testorn{40}
+\testorn{41}
+\testorn{42}
+\testorn{43}
+\testorn{44}
+\testorn{45}
+\testorn{46}
+\testorn{47}
+\testorn{48}
+\testorn{49}
+\testorn{50}
+\testorn{51}
+\testorn{52}
+\testorn{53}
+\testorn{54}
+\testorn{55}
+\testorn{56}
+\testorn{57}
+\testorn{58}
+\testorn{59}
+\testorn{60}
+\end{multicols}\clearpage}
+
+\title{Ornaments List for use with the \texttt{adobeornaments} package }
+\author{Elijah Z. Granet}
+\usepackage{multicol}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\clearpage
+\orninfo{Adobe Caslon Pro}{\caslon}{caslon}
+\orninfo{Adobe Garamond Pro}{\agp}{agp}
+\orninfo{Adobe Jenson Pro}{\jenson}{jenson}
+
+\orninfo{Arno Pro}{\arno}{arno}
+\orninfo{Bickham Script Pro}{\bickham}{bickham}
+
+\orninfo{Brioso Pro}{\brioso}{brioso}
+\orninfo{Chaparral Pro}{\chaparral}{chaparral}
+
+
+\orninfo{Cronos Pro}{\cronos}{cronos}
+\orninfo{Garamond Premier Pro}{\gpp}{gpp}
+
+\orninfo{Kepler Std}{\kepler}{kepler}
+
+	\clearpage
+	
+\begin{multicols}{2}
+\testorn{60}
+\testorn{61}
+\testorn{62}
+\testorn{63}
+\testorn{64}
+\testorn{65}
+\testorn{66}
+\testorn{67}
+\testorn{68}
+\testorn{69}
+\testorn{70}
+\testorn{71}
+\testorn{72}
+\testorn{73}
+\testorn{74}
+\testorn{75}
+\testorn{76}
+\testorn{77}
+\testorn{78}
+\testorn{79}
+\testorn{80}
+\testorn{81}
+\testorn{82}
+\testorn{83}
+\testorn{84}
+\testorn{85}
+\testorn{86}
+\testorn{87}
+\testorn{88}
+\testorn{89}
+\testorn{90}
+\testorn{91}
+\testorn{92}
+\testorn{93}
+\testorn{94}
+\testorn{95}
+\testorn{96}
+\testorn{97}
+\testorn{98}
+\testorn{99}
+\testorn{100}
+\testorn{101}
+\testorn{102}
+\testorn{103}
+\testorn{104}
+\testorn{105}
+\testorn{106}
+\testorn{107}
+\testorn{108}
+\testorn{109}
+\testorn{110}
+\testorn{111}
+\testorn{112}
+\testorn{113}
+\testorn{114}
+\testorn{115}
+\testorn{116}
+\testorn{117}
+\testorn{118}
+\testorn{119}
+\testorn{120}
+\testorn{121}
+\testorn{122}
+\testorn{123}
+\testorn{124}
+\testorn{125}
+\end{multicols}\clearpage
+
+\orninfo{Minion Pro}{\minion}{minion}
+
+\orninfo{Silentium Pro}{\silentium}{silentium}
+
+\orninfo{Voluta Script Pro}{\voluta}{voluta}
+%
+\orninfo{Warnock Pro}{\warnock}{warnock}
+
+%
+\end{document}

@@ -1,0 +1,116 @@
+\def\adobeornamentsversionnumber{1.0.0}
+\ProvidesPackage{adobeornaments}
+[2023/05/13\adobeornamentsversionnumber\
+ Command for ornaments in Adobe fonts]
+% This work may be distributed and/or modified under the 
+% conditions of the LaTeX Project Public License, either version 1.3c 
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX 
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is Elijah Z Granet
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Warning that you need
+% fontspec 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{iftex}
+\ifPDFTeX   {
+    \PackageError{textcsc}
+      {You are using pdfTeX but this package only works 
+      \MessageBreak with XeTeX or LuaTeX}{}
+    }
+\fi
+%obviously you need fontspec
+\RequirePackage{fontspec}%
+% if structure to stop error if someone only has *some* of the fonts
+\IfFontExistsTF{Arno Pro}%
+{%%%%%
+\newfontfamily\arno[Scale=1.01]{Arno Pro}%%%%%
+}{}%%%%%
+\IfFontExistsTF{Minion Pro}{%%%%
+\newfontfamily\minion[Scale=1.01]{Minion Pro}%%%%
+}{}%%%
+\IfFontExistsTF{Warnock Pro}%%%%%
+{%%%%%
+\newfontfamily\warnock[Scale=1.01]{Warnock Pro}
+}%%%%%
+{}
+\IfFontExistsTF{Brioso Pro}{%
+\newfontfamily\brioso[Scale=1.01]{Brioso Pro}%
+}{}%
+\IfFontExistsTF{Adobe Caslon Pro}{%
+\newfontfamily\caslon[Scale=1.01]{Adobe Caslon Pro}%
+}{}
+\IfFontExistsTF{Adobe Jenson Pro}{%%%%
+\newfontfamily\jenson[Scale=1.01]{Adobe Jenson Pro}%
+}%
+{}%%%%
+\IfFontExistsTF{Adobe Garamond Pro}{%%%%%
+\newfontfamily\agp[Scale=1.01]{Adobe Garamond Pro}%
+}{}%%%%
+\IfFontExistsTF{Kepler Std}{%%%%%
+\newfontfamily\kepler[Scale=1.01]{Kepler Std}%%%%%
+}%%%%
+{}
+\IfFontExistsTF{Voluta Script Pro}{%%%%%
+\newfontfamily\voluta[Scale=1.01]{Voluta Script Pro}%%%%%
+}%%%%
+{}%
+\IfFontExistsTF{Garamond Premier Pro}{%
+\newfontfamily\gpp[Scale=1.01]{Garamond Premier Pro}%
+}%
+{}
+\IfFontExistsTF{Cronos Pro}{%
+\newfontfamily\cronos[Scale=1.01]{Cronos Pro}%
+}{}
+\IfFontExistsTF{Bickham Script Pro}{%
+\newfontfamily\bickham[Scale=1.01]{Bickham Script Pro}%
+}{}
+\IfFontExistsTF{Chaparral Pro}{
+\newfontfamily\chaparral%
+[Scale=1.01]{Chaparral Pro}%
+}{}
+\IfFontExistsTF{Silentium Pro}{
+\newfontfamily\silentium%
+[Scale=1.01]{Silentium Pro}%
+}{}
+% xstring is required in order to apply if cases
+\RequirePackage{xstring}
+\newcommand{\orn}[2]{%
+    \IfEqCase{#1}{%
+{minion}%
+{{\minion\addfontfeatures{Ornament=#2}•}}%
+{arno}%
+{{\arno\addfontfeatures{Ornament=#2}•}}%
+{warnock}%
+{{\warnock\addfontfeatures{Ornament=#2}•}}
+{brioso}%
+{{\brioso\addfontfeatures{Ornament=#2}•}}
+{caslon}%
+{{\caslon\addfontfeatures{Ornament=#2}•}}
+{jenson}%
+{{\jenson\addfontfeatures{Ornament=#2}•}}
+{agp}%
+{{\agp\addfontfeatures{Ornament=#2}•}}
+{kepler}%
+{{\kepler\addfontfeatures{Ornament=#2}•}}
+{voluta}%
+{{\voluta\addfontfeatures{Ornament=#2}•}}
+{gpp}%
+{{\gpp\addfontfeatures{Ornament=#2}•}}
+{cronos}%
+{{\cronos\addfontfeatures{Ornament=#2}•}}
+{bickham}%
+{{\bickham\addfontfeatures{Ornament=#2}•}}
+{chaparral}%
+{{\chaparral\addfontfeatures{Ornament=#2}•}}
+{silentium}%
+{{\silentium\addfontfeatures{Ornament=#2}•}}
+        % you can add more cases here as desired
+    }[\PackageError{orn}{Undefined font: #1}{}]%
+}%
